@@ -21,9 +21,6 @@
     transition: all 300ms ease-out;
   }
 
-
-
-
   nav{
     display: flex;
     justify-content: space-around;
@@ -48,7 +45,6 @@
 
   }
 
-
    .nav-links li a{
     color: black;
     text-decoration: none;
@@ -60,3 +56,44 @@
     text-underline-offset: 1rem;
     text-decoration-color: rgb(185, 185, 185);
    }
+
+   .toggle-button{
+    display: none;
+    flex-direction: column;
+    width: 32px;
+    height: 27px;
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    justify-content: space-around;
+
+   }
+
+.toggle-button.active span:first-child{
+    transform: translate(45) translate(10px,5px);
+}
+
+
+.toggle-button.active span:nth-child(2){
+    transform: translate(45);
+}
+
+
+.toggle-button.active span:last-child{
+    transform: translate(-45) translate(10px,5px);
+}
+
+
+   .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+   
+   }
+
+
+
+
+
+

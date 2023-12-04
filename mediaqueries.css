@@ -1,0 +1,45 @@
+@media screen and (max-width:600px) {
+  .toggle-button{
+    display: flex;
+  }
+
+  .nav-links ul{
+    position: absolute;
+    top: 7rem;
+    right: 2.5rem;
+    display: none;
+flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    gap: .1rem;
+
+  }
+
+
+  .nav-links.active ul{
+    display: flex;
+  }
+    
+
+
+  .toggle-button.active span:first-child{
+    transform: rotate(45deg) translate(10px,7px);
+}
+
+
+.toggle-button.active span:nth-child(2){
+   opacity: 0;
+}
+
+
+.toggle-button.active span:last-child{
+    transform: rotate(-45deg) translate(7px,-6px);
+}
+
+
+
+
+
+
+
+}
