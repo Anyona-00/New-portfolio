@@ -69,19 +69,7 @@
 
    }
 
-.toggle-button.active span:first-child{
-    transform: translate(45) translate(10px,5px);
-}
 
-
-.toggle-button.active span:nth-child(2){
-    transform: translate(45);
-}
-
-
-.toggle-button.active span:last-child{
-    transform: translate(-45) translate(10px,5px);
-}
 
 
    .bar{
@@ -93,7 +81,73 @@
    }
 
 
+   section{
+    height: 96vh;
+   padding-top: 4vh;
+   margin: 0 10rem;
+   box-sizing: border-box;
+   min-height: fit-content;
+   }
 
 
+#profile{
+  display: flex;
+  
+  justify-content: center;
+  gap: 8rem;
+  height: 80vh;
+
+}
+
+.pic-container{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+
+}
+
+.text-container{
+  align-self: center;
+  text-align: center;
+
+}
 
 
+section p{
+  font-weight: 600;
+
+}
+
+#p1 #p2{
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+.title{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.btn1 .btn2 {
+  width: 8rem;
+  padding: 1rem;
+  font-size: ;
+}
+
+#socials-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon{
+  height: 2rem;
+ cursor: pointer;
+}
