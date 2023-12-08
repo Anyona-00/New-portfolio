@@ -36,7 +36,20 @@ flex-direction: column;
     transform: rotate(-45deg) translate(7px,-6px);
 }
 
+section{
+  display:flex;
+  flex-direction: column;
+}
 
+
+/*fix this*/
+/*.pic-container{
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  width:20vh;
+  margin-right: 5rem;
+}*/
 
 
 
