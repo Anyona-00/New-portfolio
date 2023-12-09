@@ -89,8 +89,8 @@
    min-height: fit-content;
    }
 
-
-#Profile{
+/*profile*/
+#profile{
   display: flex;
   justify-content: center;
   gap: 8rem;
@@ -165,3 +165,79 @@ section p{
   height: 2rem;
  cursor: pointer;
 }
+
+/*About*/
+#about{
+  position: relative;
+}
+
+.about-p{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.section-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+
+.about-details{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.experiences{
+  display: flex;
+}
+
+
+
+.about-pic-container{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  border-radius:10rem;
+  margin-right: 6rem;
+ 
+
+}
+
+
+/* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
+.about-pic{
+  border-radius: 2rem;
+}
+
+
+.arrow{
+  position: relative;
+  bottom: 2rem;
+  right: -100rem;
+  height: 2rem;
+ cursor: pointer;
+}
+
+
+
+.about-experience,.about-education{
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1rem;
+  border-radius: 2rem;
+  width: 18rem;
+  margin: 2rem;
+ 
+}
+
+
+.about-text{
+  text-align: left;
+  width: 44vw;
+}
+
