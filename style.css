@@ -241,3 +241,132 @@ section p{
   width: 44vw;
 }
 
+
+
+/*Experiences*/
+
+
+.experience-p{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.experience-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 5rem;
+}
+
+.frontend{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 20px;
+  padding: 2rem;
+ 
+}
+
+
+.experience-h2{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.experirnce-languages{
+  display: flex;
+  margin: 1.5rem;
+  gap: 14rem;
+  
+}
+
+
+.experirnce-l1{
+  display: flex;
+  gap: 2rem;
+}
+
+
+
+.experirnce-l2{
+  display: flex;
+  gap: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.backend{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 20px;
+  padding: 2rem;
+}
