@@ -364,14 +364,49 @@ border-radius: 2rem;
 
 
 /*contacts*/
+
+
+#contacts{
+  margin-top: 7rem;
+}
 .contacts-p{
   text-align: center;
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 
 
+.contact-me{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+  margin-top: 2rem;
+  gap: 4rem;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2rem;
 
+}
+
+
+
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.linkedin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
 
 
