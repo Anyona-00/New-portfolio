@@ -303,26 +303,71 @@ section p{
 
 
 
+.projects-p{
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+
+.projects-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 5rem;
+}
+
+.project-one{
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.project-image{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  
+}
+
+/* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
+.project-pic{
+border-radius: 2rem;
+}
+
+.pr-h2{
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-buttons{
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pr-btn{
+  background-color: white;
+  border-radius: 2rem;
+  padding: .75rem;
+  font-weight: bold;
+  text-align: center;
+  width: 8rem;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*contacts*/
+.contacts-p{
+  text-align: center;
+  font-size: 1rem;
+}
 
 
 
