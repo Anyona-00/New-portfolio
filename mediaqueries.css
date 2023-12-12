@@ -1,4 +1,14 @@
-@media screen and (max-width:600px) {
+@media screen and(max-width:1400px){
+
+  nav{
+    width: 80vw;
+  }
+  
+}
+
+
+
+@media screen and (max-width:1200px) {
   .toggle-button{
     display: flex;
   }
@@ -55,10 +65,29 @@ section{
 /*about*/
 #about{
   margin: 20rem;
+
 }
 .about-p{
   text-align: center;
   
 }
 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and(max-width:600px){
+
+  
 }
