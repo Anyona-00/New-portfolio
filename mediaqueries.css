@@ -6,11 +6,10 @@
   
 }
 
-
-
 @media screen and (max-width:1200px) {
   .toggle-button{
     display: flex;
+
   }
 
   .nav-links ul{
@@ -46,48 +45,51 @@ flex-direction: column;
     transform: rotate(-45deg) translate(7px,-6px);
 }
 
-section{
-  display:flex;
-  flex-direction: column;
 }
 
-/*profile*/
-/*fix this*/
-/*.pic-container{
-  display: flex;
-  justify-content: center;
-  height: 20vh;
-  width:20vh;
-  margin-right: 5rem;
-}*/
+@media screen and (max-width:600px) {
 
+  nav{
+    margin-top: -1rem;
+  }
 
-/*about*/
-#about{
-  margin: 20rem;
+  #profile {
+      display: block;
+         
+  }
 
-}
-.about-p{
-  text-align: center;
-  
-}
+  .pic-container{
+    display: flex;
+    justify-content: center;
+    height: 275px;
+    width: 275px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 2.5rem;
+   margin-bottom: 1.7rem;
+    
+  }
 
+  #p1, #p2{
+    font-size: 1rem;
+    margin-bottom: .1rem;
+  }
 
+  .title{
+font-size: 1.5rem;
+  }
 
-}
+  .btn1,.btn2 {
+    width: 7rem;
+    padding: .75rem;
+    font-size: .8rem;
+    border-radius: 20px;
+    margin: .5rem;
+    
+  }
 
+  #socials-container{
+    margin-top: .5rem;
+  }
 
-
-
-
-
-
-
-
-
-
-
-@media screen and(max-width:600px){
-
-  
 }
