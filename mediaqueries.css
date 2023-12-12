@@ -50,8 +50,10 @@ flex-direction: column;
 @media screen and (max-width:600px) {
 
   nav{
-    margin-top: -1rem;
+    margin-top: -1.8rem;
   }
+
+  /*profile*/
 
   #profile {
       display: block;
@@ -66,17 +68,21 @@ flex-direction: column;
    margin-left: auto;
    margin-right: auto;
    margin-top: 2.5rem;
-   margin-bottom: 1.7rem;
+   margin-bottom: 2rem;
     
   }
-
-  #p1, #p2{
+  #p1{
     font-size: 1rem;
-    margin-bottom: .1rem;
+  }
+
+  #p2{
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .title{
 font-size: 1.5rem;
+white-space: nowrap;
   }
 
   .btn1,.btn2 {
@@ -88,8 +94,127 @@ font-size: 1.5rem;
     
   }
 
-  #socials-container{
-    margin-top: .5rem;
+ 
+/*about*/
+
+  #about{
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5rem;
   }
+
+  .about-p{
+    text-align: center;
+    font-size: .8rem;
+    white-space: nowrap;
+  }
+
+
+  .section-container{
+    display: block;
+  }
+
+  .about-details{
+    display: block;
+  }
+
+
+
+  .experiences{
+    display: block;
+    
+
+  }
+
+  .about-experience, .about-education{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70vw;
+  }
+
+  
+
+  .about-text{
+    text-align: left;
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+
+  #experience{
+    margin-top: 1rem;
+  }
+
+
+  .about-pic-container{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+   margin-left: auto;
+   margin-right: auto;
+    border-radius:10rem;
+    
+  
+  }
+
+
+/*Experiences*/
+
+.experience-p{
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+
+.experience-container{
+  flex-direction: column;
+}
+
+
+/*projects*/
+
+
+.projects-p{
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.projects-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+ 
+}
+
+.project-image{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: auto 0;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
