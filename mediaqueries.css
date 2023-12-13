@@ -166,14 +166,19 @@ white-space: nowrap;
 
 #experirnce{
   display: block;
-  margin-left: auto;
-   margin-right: auto;
-   align-items: center;
+  text-align: center;
+  
 }
 
+
+#experience h1{
+  text-align: center;
+  
+}
 .experience-p{
   
-  font-size: 1rem;
+  text-align: center;
+  font-size: .8rem;
   white-space: nowrap;
 }
 
@@ -224,7 +229,9 @@ white-space: nowrap;
 
 
 /*projects*/
-
+#projects{
+  margin-bottom:  65rem;
+}
 
 .projects-p{
   text-align: center;
@@ -241,11 +248,16 @@ white-space: nowrap;
  
 }
 
+
+.project-one{
+  width:85vw;
+}
+
 .project-image{
   display: flex;
   justify-content: center;
-  height: 300px;
-  width: 300px;
+  height: 275px;
+  width: 275px;
   margin: auto 0;
  
 }
