@@ -166,7 +166,9 @@ white-space: nowrap;
 
 #experirnce{
   display: block;
-  text-align: center;
+  margin-left: auto;
+   margin-right: auto;
+  
   
 }
 
@@ -231,6 +233,8 @@ white-space: nowrap;
 /*projects*/
 #projects{
   margin-bottom:  65rem;
+  margin-left: auto;
+   margin-right: auto;
 }
 
 .projects-p{
@@ -258,21 +262,33 @@ white-space: nowrap;
   justify-content: center;
   height: 275px;
   width: 275px;
-  margin: auto 0;
+  margin: auto ;
  
 }
 
 
+/*contacts*/
+
+
+#contacts{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
+.contact-me{
+  padding: .4rem;
+  gap: 2rem;
+  width: 90vw;
+}
 
 
 
-
-
-
-
+.email, .linkedin{
+  
+  gap: .5rem;
+}
 
 
 
