@@ -101,7 +101,7 @@ white-space: nowrap;
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 60rem;
   }
 
   .about-p{
@@ -164,8 +164,15 @@ white-space: nowrap;
 
 /*Experiences*/
 
+#experirnce{
+  display: block;
+  margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+}
+
 .experience-p{
-  text-align: center;
+  
   font-size: 1rem;
   white-space: nowrap;
 }
@@ -173,6 +180,46 @@ white-space: nowrap;
 
 .experience-container{
   flex-direction: column;
+  gap: 1rem;
+   
+}
+
+
+.frontend, .backend{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 20px;
+  padding: .1rem;
+  
+   
+
+}
+
+.experience-h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.experirnce-languages{
+  margin: .5rem;
+  gap: 4rem;
+}
+
+.experirnce-l1, .experirnce-l2{
+  display: flex;
+  gap: .5rem;
+}
+
+.experirnce-content{
+  font-size: .7rem;
+}
+
+#experience img{
+  width: 1rem;
+  height: 1rem;
 }
 
 

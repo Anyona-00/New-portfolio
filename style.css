@@ -2,12 +2,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
-  *{
-    padding: 0;
-    margin: 0;
-  }
+  
   body{
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
   }
   html{
     scroll-behavior: smooth;
@@ -182,6 +181,8 @@ section p{
  cursor: pointer;
 }
 
+
+
 /*About*/
 
 
@@ -299,6 +300,7 @@ section p{
 
 .experirnce-l1{
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -307,10 +309,19 @@ section p{
 .experirnce-l2{
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 
 
+
+
+
+
+.experirnce-content h3{
+  align-items: center;
+  margin-bottom: -.7rem;
+}
 
 /*projects*/
 
@@ -344,9 +355,7 @@ section p{
   height: 400px;
   width: 400px;
   margin: auto 0;
-  
  
-  
 }
 
 /* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
