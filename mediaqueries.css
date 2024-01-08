@@ -166,8 +166,8 @@ white-space: nowrap;
   display: block;
   margin-left: auto;
    margin-right: auto;
-  
-  
+   
+
 }
 
 
@@ -231,6 +231,7 @@ white-space: nowrap;
 /*projects*/
 #projects{
   margin-bottom:  85rem;
+  margin-top: 10rem;
   margin-left: auto;
    margin-right: auto;
 }
@@ -289,6 +290,13 @@ white-space: nowrap;
   gap: .5rem;
 }
 
-
+.arrow{
+  position: relative;
+  top: 1rem;
+  bottom: 2rem;
+  height: 2rem;
+  left: 23rem;
+ cursor: pointer;
+}
 
 }
