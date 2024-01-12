@@ -293,18 +293,15 @@ margin-right: auto;
 
 
 .email, .linkedin{
-  
   gap: .5rem;
 }
 
 .arrow{
   display: none;
-  position: relative;                                                   
-  top: 1rem;
-  bottom: 2rem;
-  height: 1.5rem;
-  left: 22rem;
- cursor: pointer;
+}
+
+.copy{
+  width: 80vw;
 }
 
 }
