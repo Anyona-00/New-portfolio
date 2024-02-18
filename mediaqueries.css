@@ -14,7 +14,7 @@
     top: 7rem;
     right: 2.5rem;
     display: none;
-flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
     font-size: 1.5rem;
     gap: .1rem;
