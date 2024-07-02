@@ -1,164 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* general styles*/
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
 
+p {
+  color: rgb(85, 85, 85);
+}
 
-  
-  body{
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-  }
-  html{
-    scroll-behavior: smooth;
-  }
+section {
+  height: 96vh;
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
 
-  p{
-    color: rgb(85, 85, 85);
-  }
+/* Navbar styles*/
+a,
+.btn {
+  transition: all 300ms ease-out;
+}
 
-  a,.btn{
-    transition: all 300ms ease-out;
-  }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  gap: 8rem;
+}
 
-  nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
-    gap: 8rem;
-  }
+.logo {
+  font-size: 2rem;
+}
 
-  .logo{
-    font-size: 2rem;
-  }
+.logo:hover {
+  cursor: default;
+}
 
-  .logo:hover{
-    cursor: default;
-  }
+.nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
 
-  .nav-links ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    font-size: 1.5rem;
-    gap: 2rem;
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+}
 
-  }
+.nav-links li a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(185, 185, 185);
+}
 
-   .nav-links li a{
-    color: black;
-    text-decoration: none;
-   }
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  width: 32px;
+  height: 27px;
+  position: absolute;
+  top: 1.7rem;
+  right: 2rem;
+  justify-content: space-around;
+}
 
-   .nav-links li a:hover{
-    color: gray;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(185, 185, 185);
-   }
-
-   .toggle-button{
-    display: none;
-    flex-direction: column;
-    width: 32px;
-    height: 27px;
-    position: absolute;
-    top: 1.7rem;
-    right: 2rem;
-    justify-content: space-around;
-
-   }
-
-
-
-
-   .bar{
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
-   
-   }
-
-
-   section{
-    height: 96vh;
-   padding-top: 4vh;
-   margin: 0 10rem;
-   box-sizing: border-box;
-   min-height: fit-content;
-   }
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
 
 /*profile*/
-#profile{
+#profile {
   display: flex;
   justify-content: center;
   gap: 8rem;
   height: 80vh;
   margin: 0 auto;
-align-items: center;
+  align-items: center;
 }
 
-
-.info{
+.info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.pic-container{
+.pic-container {
   display: flex;
   justify-content: center;
   height: 400px;
   width: 400px;
   margin: auto 0;
-  
 }
 
-.profile-pic{
+.profile-pic {
   border-radius: 50%;
 }
 
-.text-container{
+.text-container {
   align-self: center;
   text-align: center;
-
 }
 
-
-section p{
+section p {
   font-weight: 600;
-
 }
 
-#p1,#p2{
+#p1,
+#p2 {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-.title{
+.title {
   text-align: center;
   font-size: 3rem;
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   justify-content: center;
 }
 
 .btn1 {
   width: 8rem;
-  padding: .75rem;
+  padding: 0.75rem;
   font-size: 1rem;
   border: 3px solid black;
   border-radius: 20px;
   margin: 1rem;
   background: white;
- 
 }
 
-.btn2{
+.btn2 {
   width: 8rem;
-  padding: .75rem;
+  padding: 0.75rem;
   font-size: 1rem;
   border: 3px solid rgb(204, 201, 201);
   border-radius: 20px;
@@ -167,79 +155,65 @@ section p{
   color: white;
 }
 
-
-
-#socials-container{
+#socials-container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
 }
 
-.icon{
+.icon {
   height: 2rem;
- cursor: pointer;
+  cursor: pointer;
 }
-
-
 
 /*About*/
 
-
-.about-p{
+.about-p {
   text-align: center;
   font-size: 1rem;
 }
 
-.section-container{
+.section-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
 
-
-.about-details{
+.about-details {
   display: flex;
   flex-direction: column;
 }
 
-
-.experiences{
+.experiences {
   display: flex;
 }
 
-
-
-.about-pic-container{
+.about-pic-container {
   display: flex;
   justify-content: center;
   height: 400px;
   width: 400px;
-  border-radius:10rem;
+  border-radius: 10rem;
   margin-right: 6rem;
- 
-
 }
 
-
 /* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
-.about-pic{
+.about-pic {
   border-radius: 2rem;
 }
 
-
-.arrow{
+.arrow {
   position: relative;
   bottom: 2rem;
   right: -100rem;
   height: 2rem;
- cursor: pointer;
+  cursor: pointer;
 }
 
-
-
-.about-experience,.about-education{
+.about-experience,
+.about-education {
   padding: 2rem;
   text-align: center;
   border: 1px solid black;
@@ -247,26 +221,20 @@ section p{
   border-radius: 2rem;
   width: 18rem;
   margin: 2rem;
- 
 }
 
-
-.about-text{
+.about-text {
   text-align: left;
-  
 }
-
-
 
 /*Experiences*/
 
-
-.experience-p{
+.experience-p {
   text-align: center;
   font-size: 1rem;
 }
 
-.experience-container{
+.experience-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,68 +242,50 @@ section p{
   gap: 5rem;
 }
 
-.frontend{
+.frontend {
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(59, 59, 59);
   border-radius: 20px;
   padding: 2rem;
- 
 }
 
-
-.experience-h2{
+.experience-h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-
-.experirnce-languages{
+.experirnce-languages {
   display: flex;
   margin: 1.5rem;
   gap: 14rem;
-  
 }
 
-
-.experirnce-l1{
+.experirnce-l1 {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-
-
-.experirnce-l2{
+.experirnce-l2 {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-
-
-
-
-
-
-.experirnce-content h3{
+.experirnce-content h3 {
   align-items: center;
-  margin-bottom: -.7rem;
+  margin-bottom: -0.7rem;
 }
 
 /*projects*/
 
-
-
-
-.projects-p{
+.projects-p {
   text-align: center;
   font-size: 1rem;
 }
 
-
-
-.projects-container{
+.projects-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,70 +293,60 @@ section p{
   gap: 5rem;
 }
 
-.project-one{
+.project-one {
   border: 1px solid black;
   padding: 1rem;
   border-radius: 2rem;
 }
 
-.project-image{
+.project-image {
   display: flex;
   justify-content: center;
   height: 400px;
   width: 400px;
   margin: auto 0;
- 
 }
 
 /* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
-.project-pic{
-border-radius: 2rem;
+.project-pic {
+  border-radius: 2rem;
 }
 
-.pr-h2{
+.pr-h2 {
   text-align: center;
   padding: 1rem;
 }
 
-.project-buttons{
+.project-buttons {
   display: flex;
   padding: 1rem;
   justify-content: center;
   gap: 2rem;
 }
 
-.pr-btn{
+.pr-btn {
   background-color: white;
   border-radius: 2rem;
-  padding: .75rem;
+  padding: 0.75rem;
   font-weight: bold;
   text-align: center;
   width: 8rem;
 }
 
-
-
-
-
 /*contacts*/
 
-
-#contacts{
+#contacts {
   margin-top: 4rem;
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
-.contacts-p{
+.contacts-p {
   text-align: center;
   font-size: 1rem;
- 
 }
 
-
-
-.contact-me{
+.contact-me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -418,29 +358,23 @@ border-radius: 2rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2rem;
-
 }
 
-
-
-.email{
+.email {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.linkedin{
+.linkedin {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-
-
-
-.backend{
+.backend {
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(59, 59, 59);
@@ -448,15 +382,13 @@ border-radius: 2rem;
   padding: 2rem;
 }
 
-.contact-text{
+.contact-text {
   cursor: pointer;
 }
 
-
-.copy{
+.copy {
   justify-content: center;
-margin-top: 30rem;
- margin-left: auto;
- margin-right: auto;
- 
+  margin-top: 30rem;
+  margin-left: auto;
+  margin-right: auto;
 }
