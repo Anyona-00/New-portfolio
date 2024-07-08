@@ -232,8 +232,8 @@ section p {
 .about-pic-container {
   display: flex;
   justify-content: center;
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
   border-radius: 10rem;
   margin-right: 6rem;
 }
@@ -246,6 +246,7 @@ section p {
 .arrow {
   position: absolute;
   bottom: 2rem;
+  right: -100rem;
   height: 2rem;
   cursor: pointer;
 }
@@ -341,8 +342,8 @@ section p {
 .project-image {
   display: flex;
   justify-content: center;
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
   margin: auto 0;
 }
 
