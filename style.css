@@ -1,17 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/*Light mode*/
+:root {
+  --primary-color: white;
+  --primary-color-2: rgb(250, 250, 250);
+  --primary-color-3: rgb(181, 181, 181);
+  --background-color: rgb(255, 255, 255);
+
+  --secondary-color: black;
+  --secondary-color-2: rgb(85, 85, 85);
+  --button-background: rgb(53, 53, 53);
+  --button-text-hover: grey;
+  --button-border: rgb(53, 53, 53) 0.2rem solid;
+  --button-border-2: rgb(255, 255, 255) 0.2rem solid;
+  --container-border: 1px solid black;
+}
+
+/*Dark Mode*/
+[theme="dark"] {
+  --primary-color: black;
+  --primary-color-2: rgb(39, 39, 39);
+  --primary-color-3: rgb(74, 74, 74);
+  --background-color: rgb(33, 33, 33);
+
+  --secondary-color: white;
+  --secondary-color-2: rgb(170, 170, 170);
+  --button-background: rgb(202, 202, 202);
+  --button-text-hover: lightgrey;
+  --button-border: rgb(202, 202, 202) 0.2rem solid;
+  --button-border-2: rgb(0, 0, 0) 0.1rem solid;
+  --container-border: 1px solid white;
+}
+
+h3 {
+  color: var(--secondary-color);
+}
 
 /* general styles*/
 body {
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
+  background-color: var(--background-color);
 }
 html {
   scroll-behavior: smooth;
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-color-2);
 }
 
 section {
@@ -38,6 +74,7 @@ nav {
 
 .logo {
   font-size: 2rem;
+  color: var(--secondary-color);
 }
 
 .logo:hover {
@@ -53,7 +90,7 @@ nav {
 }
 
 .nav-links li a {
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -78,7 +115,7 @@ nav {
 .bar {
   height: 3px;
   width: 100%;
-  background-color: black;
+  background-color: var(--secondary-color);
   border-radius: 10px;
 }
 
@@ -127,6 +164,7 @@ section p {
 .title {
   text-align: center;
   font-size: 3rem;
+  color: var(--secondary-color);
 }
 
 .btn-container {
@@ -138,10 +176,11 @@ section p {
   width: 8rem;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 3px solid black;
+  border: var(--button-border);
   border-radius: 20px;
   margin: 1rem;
-  background: white;
+  background: var(--background-color);
+  color: var(--secondary-color);
 }
 
 .btn2 {
@@ -151,8 +190,8 @@ section p {
   border: 3px solid rgb(204, 201, 201);
   border-radius: 20px;
   margin: 1rem;
-  background-color: black;
-  color: white;
+  background-color: var(--button-background);
+  color: var(--primary-color);
 }
 
 #socials-container {
@@ -205,9 +244,8 @@ section p {
 }
 
 .arrow {
-  position: relative;
+  position: absolute;
   bottom: 2rem;
-  right: -100rem;
   height: 2rem;
   cursor: pointer;
 }
@@ -216,7 +254,7 @@ section p {
 .about-education {
   padding: 2rem;
   text-align: center;
-  border: 1px solid black;
+  border: var(--container-border);
   margin: 1rem;
   border-radius: 2rem;
   width: 18rem;
@@ -245,7 +283,7 @@ section p {
 .frontend {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(59, 59, 59);
+  border: var(--container-border);
   border-radius: 20px;
   padding: 2rem;
 }
@@ -253,6 +291,7 @@ section p {
 .experience-h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: var(--secondary-color);
 }
 
 .experirnce-languages {
@@ -294,7 +333,7 @@ section p {
 }
 
 .project-one {
-  border: 1px solid black;
+  /*border: var(--container-border);*/
   padding: 1rem;
   border-radius: 2rem;
 }
@@ -315,6 +354,7 @@ section p {
 .pr-h2 {
   text-align: center;
   padding: 1rem;
+  color: var(--secondary-color);
 }
 
 .project-buttons {
@@ -350,7 +390,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: var(--container-border);
   padding: 1rem;
   margin-top: 2rem;
   gap: 4rem;
@@ -377,7 +417,7 @@ section p {
 .backend {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(59, 59, 59);
+  border: var(--container-border);
   border-radius: 20px;
   padding: 2rem;
 }

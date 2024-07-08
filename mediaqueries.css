@@ -16,7 +16,7 @@
   justify-content: space-around;
 }
 
-@media screen and (max-width: var(--tablet)) {
+@media screen and (max-width: 1200px) {
   .toggle-button {
     display: flex;
   }
@@ -46,6 +46,13 @@
 
   .toggle-button.active span:last-child {
     transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  nav li:last-child {
+    width: max-content;
+    display: flex;
+    margin: auto;
+    padding: 10px;
   }
 }
 
