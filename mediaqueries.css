@@ -58,10 +58,17 @@
 
 @media (min-width: 1024px) {
   .pic-container {
-    padding-left: 4rem;
+    margin-left: 10rem;
   }
   .info {
-    padding-right: 8rem;
+    margin-right: 14rem;
+  }
+  #p1,
+  #p2 {
+    line-height: 2.5rem;
+  }
+  .title {
+    line-height: 2.5rem;
   }
 }
 
@@ -86,6 +93,11 @@
     margin-top: 2.5rem;
     margin-bottom: 2rem;
   }
+  .profile-pic {
+    height: 275px;
+    width: 275px;
+  }
+
   #p1 {
     font-size: 1rem;
   }
