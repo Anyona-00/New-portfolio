@@ -13,6 +13,7 @@
   --button-border: rgb(53, 53, 53) 0.2rem solid;
   --button-border-2: rgb(255, 255, 255) 0.2rem solid;
   --container-border: 1px solid black;
+  --branch-width: 4px;
 }
 
 /*Dark Mode*/
@@ -29,6 +30,7 @@
   --button-border: rgb(202, 202, 202) 0.2rem solid;
   --button-border-2: rgb(0, 0, 0) 0.1rem solid;
   --container-border: 1px solid white;
+  --branch-width: 4px;
 }
 
 @keyframes appear {
@@ -385,7 +387,7 @@ section p {
   position: relative;
   width: calc(50% - 50px);
   padding: 1.5rem;
-  background: pink;
+
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
