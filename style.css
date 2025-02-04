@@ -31,6 +31,23 @@
   --container-border: 1px solid white;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: 0% cover 40%;
+}
+
 h3 {
   color: var(--secondary-color);
 }
@@ -53,7 +70,6 @@ p {
 section {
   height: 100vh;
   padding-top: 4vh;
-
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -283,6 +299,143 @@ section p {
 .view-all {
   text-align: center;
   margin-top: 2rem;
+}
+
+.experience-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Main tree trunk */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: var(--branch-width);
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2rem 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Branch connector */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(50% - 100px);
+  height: var(--branch-width);
+  background-color: var(--secondary-color);
+}
+
+/* Circle node */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border: 4px solid var(--secondary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  width: calc(50% - 50px);
+  padding: 1.5rem;
+  background: pink;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Content positioning */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(odd)::before {
+  left: 0;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-role {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background-color: #f0f4f8;
+  color: var(--secondary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
 }
 
 /*About*/

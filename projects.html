@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <style>
+      /* ... (keeping the same root variables and basic styles) ... */
+      :root {
+        --primary-color: #2d2e32;
+        --secondary-color: #147efb;
+        --text-color: #767676;
+        --background-color: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: var(--background-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      header p {
+        color: var(--text-color);
+        font-size: 1.2rem;
+      }
+
+      /* Updated grid layout for two columns */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .project-card {
+        background: var(--background-color);
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Updated image dimensions for rectangular shape */
+      .project-image {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .project-image img:hover {
+        transform: scale(1.1);
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .project-description {
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        min-height: 4.8em;
+      }
+
+      .project-tech {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+
+      .tech-tag {
+        background: #f5f5f5;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        color: var(--primary-color);
+      }
+
+      .project-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-btn {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .github-btn {
+        background: #333;
+        color: white;
+      }
+
+      .demo-btn {
+        background: var(--secondary-color);
+        color: white;
+      }
+
+      .screenshots-btn {
+        grid-column: 1 / -1;
+        background: #f5f5f5;
+        color: var(--primary-color);
+        padding: 0.75rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .project-btn:hover,
+      .screenshots-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      /* Modal styles remain the same */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      .modal-content {
+        position: relative;
+        max-width: 800px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--text-color);
+      }
+
+      .screenshot-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .screenshot {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+
+      /* Updated media queries for responsive layout */
+      @media (max-width: 900px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .project-image {
+          height: 250px;
+        }
+
+        .modal-content {
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Projects</h1>
+        <p>A collection of my work and contributions to various projects</p>
+      </header>
+
+      <div class="projects-grid">
+        <!-- Example Project Card 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="./assets/RPG-Dragon-reppeler.webp"
+              alt="TeloSoma Project"
+            />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">TeloSoma - Learning Platform</h2>
+            <p class="project-description">
+              A comprehensive learning platform designed to make education
+              accessible and engaging for students.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/The-Dragonss/TeleSoma"
+                class="project-btn github-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://lighthearted-tanuki-e3b368.netlify.app/"
+                class="project-btn demo-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="telosoma">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example Project Card 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/Clothe-Store.webp" alt="SaccoStream Project" />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">SaccoStream – Smart Payment</h2>
+            <p class="project-description">
+              A modern payment solution designed for Saccos to streamline their
+              financial operations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/Adamur-Tribe/SaccoStream"
+                class="project-btn github-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://rococo-tartufo-70bb1e.netlify.app/"
+                class="project-btn demo-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="saccostream">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+
+    <!-- Modal for Screenshots -->
+    <div class="modal" id="screenshotsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">Project Screenshots</h2>
+        <div class="screenshot-grid">
+          <!-- Screenshots will be added dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Screenshot Modal Functionality
+      const modal = document.getElementById("screenshotsModal");
+      const closeBtn = document.querySelector(".close-modal");
+      const screenshotBtns = document.querySelectorAll(".screenshots-btn");
+      const screenshotGrid = document.querySelector(".screenshot-grid");
+
+      // Project screenshots data
+      const projectScreenshots = {
+        telosoma: [
+          "./assets/telosoma-screenshot1.jpg",
+          "./assets/telosoma-screenshot2.jpg",
+          "./assets/telosoma-screenshot3.jpg",
+        ],
+        saccostream: [
+          "./assets/saccostream-screenshot1.jpg",
+          "./assets/saccostream-screenshot2.jpg",
+          "./assets/saccostream-screenshot3.jpg",
+        ],
+        // Add more projects' screenshots here
+      };
+
+      screenshotBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const project = btn.dataset.project;
+          const screenshots = projectScreenshots[project];
+
+          screenshotGrid.innerHTML = "";
+
+          screenshots.forEach((src) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = `${project} screenshot`;
+            img.className = "screenshot";
+            screenshotGrid.appendChild(img);
+          });
+
+          modal.style.display = "block";
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "block") {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+    </script>
+  </body>
+</html>
