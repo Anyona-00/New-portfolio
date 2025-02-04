@@ -209,6 +209,82 @@ section p {
   cursor: pointer;
 }
 
+/*projects*/
+
+.projects-p {
+  text-align: center;
+  font-size: 1rem;
+}
+.projects-container {
+  display: flex;
+  overflow: hidden;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+.project-one {
+  min-width: calc(100% / 3);
+
+  border-radius: 2rem;
+}
+.project-image {
+  display: flex;
+  justify-content: center;
+  height: 25rem;
+  width: 25rem;
+  margin: auto;
+}
+.project-pic {
+  border-radius: 2rem;
+}
+.pr-h2 {
+  text-align: center;
+  padding: 1rem;
+  color: var(--secondary-color);
+}
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.pr-btn {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.75rem;
+  font-weight: bold;
+  width: 8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.pr-btn:hover {
+  background-color: var(--primary-color-3);
+}
+
+/* Carousel Navigation */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel-arrow {
+  color: var(--secondary-color);
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-top: -6rem;
+}
+.carousel-arrow:hover {
+  background-color: var(--primary-color);
+}
+
+/* View All Button */
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 /*About*/
 
 .about-p {
@@ -319,62 +395,6 @@ section p {
 .experirnce-content h3 {
   align-items: center;
   margin-bottom: -0.7rem;
-}
-
-/*projects*/
-
-.projects-p {
-  text-align: center;
-  font-size: 1rem;
-}
-
-.projects-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
-  gap: 5rem;
-}
-
-.project-one {
-  /*border: var(--container-border);*/
-  padding: 1rem;
-  border-radius: 2rem;
-}
-
-.project-image {
-  display: flex;
-  justify-content: center;
-  height: 25rem;
-  width: 25rem;
-  margin: auto 0;
-}
-
-/* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
-.project-pic {
-  border-radius: 2rem;
-}
-
-.pr-h2 {
-  text-align: center;
-  padding: 1rem;
-  color: var(--secondary-color);
-}
-
-.project-buttons {
-  display: flex;
-  padding: 1rem;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.pr-btn {
-  background-color: white;
-  border-radius: 2rem;
-  padding: 0.75rem;
-  font-weight: bold;
-  text-align: center;
-  width: 8rem;
 }
 
 /*contacts*/

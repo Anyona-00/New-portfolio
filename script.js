@@ -50,3 +50,54 @@ function setLightMode() {
     icon.src = icon.getAttribute("src-light");
   });
 }
+
+const projectContainer = document.querySelector(".projects-container");
+let scrollAmount = 0;
+const scrollStep = projectContainer.offsetWidth / 3; // Move by 3 projects width
+let autoScroll;
+
+function nextSlide() {
+  if (
+    scrollAmount <
+    projectContainer.scrollWidth - projectContainer.offsetWidth
+  ) {
+    scrollAmount += scrollStep;
+  } else {
+    scrollAmount = 0; // Loop back to start
+  }
+  projectContainer.scrollTo({ left: scrollAmount, behavior: "smooth" });
+  resetAutoScroll();
+}
+
+function prevSlide() {
+  if (scrollAmount > 0) {
+    scrollAmount -= scrollStep;
+  } else {
+    scrollAmount = projectContainer.scrollWidth - projectContainer.offsetWidth;
+  }
+  projectContainer.scrollTo({ left: scrollAmount, behavior: "smooth" });
+  resetAutoScroll();
+}
+
+function startAutoScroll() {
+  autoScroll = setInterval(nextSlide, 100000);
+}
+
+function resetAutoScroll() {
+  clearInterval(autoScroll);
+  startAutoScroll();
+}
+
+if (window.innerWidth > 600) {
+  startAutoScroll(); // Only auto-scroll on desktop
+}
+
+const viewAllButton = document.querySelector(".view-all button");
+const projects = document.querySelectorAll(".project-one");
+
+viewAllButton.addEventListener("click", function () {
+  projects.forEach((project) => {
+    project.style.display = "block"; // Show all projects
+  });
+  viewAllButton.style.display = "none"; // Hide the button after click
+});

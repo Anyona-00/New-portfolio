@@ -70,6 +70,10 @@
   .title {
     line-height: 2.5rem;
   }
+  .projects-container {
+    padding: 0rem;
+    justify-content: space-evenly;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -260,10 +264,18 @@
     align-items: center;
     flex-direction: column;
     margin-top: 4rem;
+    overflow: hidden;
   }
 
   .project-one {
-    width: 85vw;
+    min-width: 100%;
+    padding: 1rem;
+    padding-bottom: 4rem;
+    display: none;
+  }
+
+  .project-one:nth-child(-n + 3) {
+    display: block; /* Show only the first 3 projects */
   }
 
   .project-image {
@@ -272,6 +284,10 @@
     height: 275px;
     width: 275px;
     margin: auto;
+  }
+
+  .carousel-arrow {
+    display: none;
   }
 
   /*contact me*/

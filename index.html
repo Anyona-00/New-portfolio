@@ -88,84 +88,109 @@
       <p class="projects-p">Browse My Recent</p>
       <h1 class="title">Projects</h1>
 
-      <div class="projects-container">
-        <div class="project-one">
-          <div class="project-image">
-            <img
-              src="./assets/RPG-Dragon-reppeler.webp"
-              alt="project three image"
-              class="project-pic"
-            />
+      <div class="carousel-container">
+        <button class="carousel-arrow left" onclick="prevSlide()">
+          &#10094;
+        </button>
+
+        <div class="projects-container">
+          <div class="project-one">
+            <div class="project-image">
+              <img
+                src="./assets/RPG-Dragon-reppeler.webp"
+                alt="TeloSoma"
+                class="project-pic"
+              />
+            </div>
+            <h2 class="pr-h2">TeloSoma - Learning Platform</h2>
+            <div class="project-buttons">
+              <button
+                class="pr-btn"
+                onclick="window.open('https://github.com/The-Dragonss/TeleSoma')"
+              >
+                GitHub
+              </button>
+              <button
+                class="pr-btn"
+                onclick="window.open('https://lighthearted-tanuki-e3b368.netlify.app/')"
+              >
+                Live Demo
+              </button>
+            </div>
           </div>
-          <h2 class="pr-h2">TeloSoma - Learning Platform</h2>
-          <div class="project-buttons">
-            <button
-              class="pr-btn"
-              onclick="window.open('https://github.com/The-Dragonss/TeleSoma')"
-            >
-              GitHub
-            </button>
-            <button
-              class="pr-btn"
-              onclick="window.open('https://lighthearted-tanuki-e3b368.netlify.app/')"
-            >
-              Live Demo
-            </button>
+
+          <div class="project-one">
+            <div class="project-image">
+              <img
+                src="./assets/Clothe-Store.webp"
+                alt="SaccoStream"
+                class="project-pic"
+              />
+            </div>
+            <h2 class="pr-h2">SaccoStream – Smart Payment</h2>
+            <div class="project-buttons">
+              <button
+                class="pr-btn"
+                onclick="window.open('https://github.com/Adamur-Tribe/SaccoStream')"
+              >
+                GitHub
+              </button>
+              <button
+                class="pr-btn"
+                onclick="window.open('https://rococo-tartufo-70bb1e.netlify.app/')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="project-one">
+            <div class="project-image">
+              <img
+                src="./assets/Restuarant.jpeg"
+                alt="Restaurant Recommendation"
+                class="project-pic"
+              />
+            </div>
+            <h2 class="pr-h2">Restaurant Recommendation</h2>
+            <div class="project-buttons">
+              <button
+                class="pr-btn"
+                onclick="window.open('https://github.com/Anyona-00/Nairobi_Restuarant_Recomendation_system')"
+              >
+                GitHub
+              </button>
+            </div>
+          </div>
+
+          <div class="project-one">
+            <div class="project-image">
+              <img
+                src="./assets/Clothe-Store.webp"
+                alt="Extra Project"
+                class="project-pic"
+              />
+            </div>
+            <h2 class="pr-h2">Extra Project</h2>
+            <div class="project-buttons">
+              <button class="pr-btn" onclick="window.open('#')">GitHub</button>
+              <button class="pr-btn" onclick="window.open('#')">
+                Live Demo
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="project-one">
-          <div class="project-image">
-            <img
-              src="./assets/Clothe-Store.webp"
-              alt="Clothe-Store image"
-              class="project-pic"
-            />
-          </div>
-          <h2 class="pr-h2">SaccoStream – Smart Payment</h2>
-          <div class="project-buttons">
-            <button
-              class="pr-btn"
-              onclick="window.open('https://github.com/Adamur-Tribe/SaccoStream')"
-            >
-              GitHub
-            </button>
-            <button
-              class="pr-btn"
-              onclick="window.open(' https://rococo-tartufo-70bb1e.netlify.app/')"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="project-one">
-          <div class="project-image">
-            <img
-              src="./assets/Restuarant.jpeg"
-              alt="project two image"
-              class="project-pic"
-            />
-          </div>
-          <h2 class="pr-h2">Restuarant Recomendation</h2>
-          <div class="project-buttons">
-            <button
-              class="pr-btn"
-              onclick="window.open('https://github.com/Anyona-00/Nairobi_Restuarant_Recomendation_system')"
-            >
-              GitHub
-            </button>
-          </div>
-        </div>
+        <button class="carousel-arrow right" onclick="nextSlide()">
+          &#10095;
+        </button>
       </div>
-      <img
-        src="./assets/arrow.png"
-        src-light="./assets/arrow.png"
-        src-dark="./assets/arrow_dark.png"
-        alt="Arrow icon"
-        class="arrow"
-        onclick="location.href = './#projects'"
-      />
+
+      <div class="view-all">
+        <button class="pr-btn" onclick="window.location.href='./projects.html'">
+          View All Projects
+        </button>
+      </div>
     </section>
 
     <section id="about">
