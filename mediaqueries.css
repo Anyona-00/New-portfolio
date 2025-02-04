@@ -156,7 +156,7 @@
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
 
   .about-p {
@@ -247,18 +247,18 @@
     font-size: 1rem;
   }
 
-  .experirnce-languages {
+  .experience-languages {
     margin: 0.5rem;
     gap: 4rem;
   }
 
-  .experirnce-l1,
-  .experirnce-l2 {
+  .experience-l1,
+  .experience-l2 {
     display: flex;
     gap: 0.5rem;
   }
 
-  .experirnce-content {
+  .experience-content {
     font-size: 0.7rem;
   }
 
@@ -269,7 +269,7 @@
 
   /*projects*/
   #projects {
-    margin-bottom: 10rem;
+    margin-bottom: 45rem;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
