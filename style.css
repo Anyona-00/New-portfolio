@@ -442,7 +442,15 @@ section p {
 
 /*About*/
 
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-p {
+  padding-top: 4rem;
   text-align: center;
   font-size: 1rem;
 }
@@ -452,11 +460,14 @@ section p {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  width: 90%;
 }
 
 .about-details {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .experiences {
@@ -469,7 +480,7 @@ section p {
   height: 25rem;
   width: 25rem;
   border-radius: 10rem;
-  margin-right: 6rem;
+  margin-right: 3.7rem;
 }
 
 /* added coz the child is bigger than parent hence cant show  radius when applied to parent*/
@@ -490,7 +501,6 @@ section p {
   padding: 2rem;
   text-align: center;
   border: var(--container-border);
-  margin: 1rem;
   border-radius: 2rem;
   width: 18rem;
   margin: 2rem;
@@ -498,6 +508,7 @@ section p {
 
 .about-text {
   text-align: left;
+  width: 70%;
 }
 
 /*Experiences*/
