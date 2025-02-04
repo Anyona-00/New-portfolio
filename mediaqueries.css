@@ -30,7 +30,6 @@
     justify-content: space-between;
     font-size: 1.5rem;
     gap: 0.1rem;
-    z-index: 999;
   }
 
   .nav-links.active ul {
@@ -156,7 +155,7 @@
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20rem;
+    margin-bottom: 60rem;
   }
 
   .about-p {
@@ -247,18 +246,18 @@
     font-size: 1rem;
   }
 
-  .experience-languages {
+  .experirnce-languages {
     margin: 0.5rem;
     gap: 4rem;
   }
 
-  .experience-l1,
-  .experience-l2 {
+  .experirnce-l1,
+  .experirnce-l2 {
     display: flex;
     gap: 0.5rem;
   }
 
-  .experience-content {
+  .experirnce-content {
     font-size: 0.7rem;
   }
 
@@ -269,7 +268,7 @@
 
   /*projects*/
   #projects {
-    margin-bottom: 45rem;
+    margin-bottom: 85rem;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
