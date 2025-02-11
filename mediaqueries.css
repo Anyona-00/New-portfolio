@@ -155,11 +155,13 @@
   /*about*/
 
   #about {
+    min-height: fit-content;
     margin-top: 20rem;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30rem;
     background-color: pink;
+    padding: 2rem 1rem;
   }
 
   .about-p {
@@ -170,6 +172,7 @@
 
   .section-container {
     display: block;
+    height: auto;
   }
 
   .about-details {
@@ -185,6 +188,7 @@
     margin-right: auto;
     margin-left: auto;
     width: 70vw;
+    height: auto
   }
 
   .about-text {
@@ -352,6 +356,14 @@
   
   .timeline {
     max-width: 600px;
+    height: auto;
+    min-height: fit-content;
+  }
+
+  .experience-section {
+    height: auto;
+    min-height: fit-content;
+    overflow: visible;
   }
 }
 
@@ -359,6 +371,8 @@
 @media screen and (max-width: 768px) {
   .experience-section {
     padding: 2rem 1rem;
+    height: auto;
+    min-height: fit-content;
   }
 
   .section-title {
@@ -386,6 +400,7 @@
   .timeline-content {
     width: calc(100% - 100px);
     margin-left: 80px !important;
+    height: auto;
   }
 
   /* Override the alternate positioning */
@@ -422,6 +437,7 @@
   .experience-section {
     padding: 1.5rem 0.8rem;
     background-color: rgb(43, 73, 73);
+    min-height: fit-content;
   }
 
   .section-title {
