@@ -53,7 +53,7 @@ function setLightMode() {
 
 const projectContainer = document.querySelector(".projects-container");
 let scrollAmount = 0;
-const scrollStep = projectContainer.offsetWidth / 3; // Move by 3 projects width
+const scrollStep = projectContainer.offsetWidth / 3; 
 let autoScroll;
 
 function nextSlide() {
@@ -63,7 +63,7 @@ function nextSlide() {
   ) {
     scrollAmount += scrollStep;
   } else {
-    scrollAmount = 0; // Loop back to start
+    scrollAmount = 0; 
   }
   projectContainer.scrollTo({ left: scrollAmount, behavior: "smooth" });
   resetAutoScroll();
@@ -89,7 +89,7 @@ function resetAutoScroll() {
 }
 
 if (window.innerWidth > 600) {
-  startAutoScroll(); // Only auto-scroll on desktop
+  startAutoScroll(); 
 }
 
 const viewAllButton = document.querySelector(".view-all button");
@@ -97,9 +97,9 @@ const projects = document.querySelectorAll(".project-one");
 
 viewAllButton.addEventListener("click", function () {
   projects.forEach((project) => {
-    project.style.display = "block"; // Show all projects
+    project.style.display = "block"; 
   });
-  viewAllButton.style.display = "none"; // Hide the button after click
+  viewAllButton.style.display = "none"; 
 });
 
 const observer = new IntersectionObserver(
@@ -115,7 +115,7 @@ const observer = new IntersectionObserver(
   }
 );
 
-// Observe all timeline items
+
 document.querySelectorAll(".timeline-item").forEach((item) => {
   observer.observe(item);
 });
