@@ -421,7 +421,7 @@
 @media screen and (max-width: 480px) {
   .experience-section {
     padding: 1.5rem 0.8rem;
-    background-color: aqua;
+    background-color: rgb(43, 73, 73);
   }
 
   .section-title {
