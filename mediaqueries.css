@@ -159,6 +159,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30rem;
+    background-color: pink;
   }
 
   .about-p {
@@ -420,6 +421,7 @@
 @media screen and (max-width: 480px) {
   .experience-section {
     padding: 1.5rem 0.8rem;
+    background-color: aqua;
   }
 
   .section-title {
