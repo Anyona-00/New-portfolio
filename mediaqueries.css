@@ -22,6 +22,7 @@
   }
 
   .nav-links ul {
+    z-index: 999;
     position: absolute;
     top: 7rem;
     right: 2.5rem;
@@ -156,11 +157,11 @@
 
   #about {
     min-height: fit-content;
-    margin-top: 20rem;
+    margin-top: 0rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 30rem;
-    background-color: pink;
+    margin-bottom: 5rem;
+   
     padding: 2rem 1rem;
   }
 
@@ -218,6 +219,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
   }
 
   #experience h1 {
@@ -276,8 +278,8 @@
 
   /*projects*/
   #projects {
-    margin-bottom: 85rem;
-    margin-top: 10rem;
+    margin-bottom: 5rem;
+    margin-top: 0rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -436,8 +438,10 @@
 @media screen and (max-width: 480px) {
   .experience-section {
     padding: 1.5rem 0.8rem;
-    background-color: rgb(43, 73, 73);
+   
     min-height: fit-content;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
   }
 
   .section-title {
