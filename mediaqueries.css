@@ -161,7 +161,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 5rem;
-   
+
     padding: 2rem 1rem;
   }
 
@@ -189,7 +189,7 @@
     margin-right: auto;
     margin-left: auto;
     width: 70vw;
-    height: auto
+    height: auto;
   }
 
   .about-text {
@@ -219,7 +219,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
   }
 
   #experience h1 {
@@ -349,13 +348,12 @@
   }
 }
 
-
 /* Tablet Styles */
 @media screen and (max-width: 992px) {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .timeline {
     max-width: 600px;
     height: auto;
@@ -438,7 +436,7 @@
 @media screen and (max-width: 480px) {
   .experience-section {
     padding: 1.5rem 0.8rem;
-   
+
     min-height: fit-content;
     margin-top: 5rem;
     margin-bottom: 0rem;
@@ -454,5 +452,29 @@
 
   .timeline-description {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Tablets */
+  .project-image {
+    width: 80vw; /* Adjust width for tablets */
+    height: 22rem; /* Slightly reduce height */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .project-image {
+    width: 90vw; /* Take most of the screen width */
+    height: 20rem; /* Adjust height */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile devices */
+  .project-image {
+    width: 95vw;
+    height: 18rem;
   }
 }
