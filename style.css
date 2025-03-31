@@ -442,7 +442,7 @@ section p {
 }
 
 .skill-tag {
-  background-color: #f0f4f8;
+  background-color: var(--primary-color-3);
   color: var(--secondary-color);
   padding: 0.3rem 0.8rem;
   border-radius: 1rem;
