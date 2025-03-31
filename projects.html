@@ -12,6 +12,7 @@
         --text-color: #767676;
         --background-color: #fff;
         --shadow-color: rgba(0, 0, 0, 0.1);
+        --primary-color-3: #4a4b50; /* Added for hover effect */
       }
 
       * {
@@ -119,53 +120,56 @@
         color: var(--primary-color);
       }
 
+      /* Updated project buttons styling */
       .project-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: center;
         gap: 1rem;
         margin-bottom: 1rem;
+        flex-wrap: wrap;
       }
 
       .project-btn {
+        background-color: white;
+        border-radius: 2rem;
         padding: 0.75rem;
-        border: none;
-        border-radius: 0.5rem;
         font-weight: bold;
+        width: 8rem;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: 0.3s;
         text-decoration: none;
         text-align: center;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        width: calc(40% - 0.5rem);
       }
 
-      .github-btn {
-        background: #333;
-        color: white;
-      }
-
-      .demo-btn {
-        background: var(--secondary-color);
+      .project-btn:hover {
+        background-color: var(--primary-color-3);
         color: white;
       }
 
       .screenshots-btn {
-        grid-column: 1 / -1;
-        background: #f5f5f5;
-        color: var(--primary-color);
+        background-color: white;
+        border-radius: 2rem;
         padding: 0.75rem;
-        border: none;
-        border-radius: 0.5rem;
         font-weight: bold;
+        width: 8rem;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: 0.3s;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        width: 80%;
+        margin-top: 0.5rem;
+        order: 3;
       }
 
-      .project-btn:hover,
       .screenshots-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
+        background-color: var(--primary-color-3);
+        color: white;
       }
 
-      /* Modal styles remain the same */
+      /* Updated Modal styles */
       .modal {
         display: none;
         position: fixed;
@@ -180,11 +184,18 @@
 
       .modal-content {
         position: relative;
-        max-width: 800px;
+        max-width: 90%; /* Increased from 800px to 90% of viewport */
+        width: 1200px; /* Added a specific width */
         margin: 2rem auto;
         background: white;
         padding: 2rem;
         border-radius: 1rem;
+      }
+
+      .modal-title {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        text-align: center;
       }
 
       .close-modal {
@@ -194,21 +205,31 @@
         font-size: 2rem;
         cursor: pointer;
         color: var(--text-color);
+        z-index: 1001;
       }
 
       .screenshot-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(300px, 1fr)
+        ); /* Increased thumbnail size */
+        gap: 1.5rem; /* Increased gap between screenshots */
         margin-top: 1rem;
       }
 
       .screenshot {
         width: 100%;
-        height: 200px;
+        height: 250px; /* Increased height from 200px to 250px */
         object-fit: cover;
         border-radius: 0.5rem;
         cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .screenshot:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
 
       /* Updated media queries for responsive layout */
@@ -231,7 +252,17 @@
         }
 
         .modal-content {
-          margin: 1rem;
+          width: 95%;
+          margin: 1rem auto;
+          padding: 1.5rem;
+        }
+
+        .screenshot-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .screenshot {
+          height: 200px;
         }
       }
     </style>
@@ -244,7 +275,7 @@
       </header>
 
       <div class="projects-grid">
-        <!-- Example Project Card 1 -->
+        <!-- Project Cards -->
         <div class="project-card">
           <div class="project-image">
             <img
@@ -255,8 +286,9 @@
           <div class="project-content">
             <h2 class="project-title">TeloSoma - Learning Platform</h2>
             <p class="project-description">
-              A comprehensive learning platform designed to make education
-              accessible and engaging for students.
+              An interactive e-learning platform that connects students with
+              educators through customizable courses, real-time progress
+              tracking, and collaborative learning tools.
             </p>
             <div class="project-tech">
               <span class="tech-tag">React</span>
@@ -266,13 +298,13 @@
             <div class="project-buttons">
               <a
                 href="https://github.com/The-Dragonss/TeleSoma"
-                class="project-btn github-btn"
+                class="project-btn"
                 target="_blank"
                 >GitHub</a
               >
               <a
                 href="https://lighthearted-tanuki-e3b368.netlify.app/"
-                class="project-btn demo-btn"
+                class="project-btn"
                 target="_blank"
                 >Live Demo</a
               >
@@ -283,16 +315,164 @@
           </div>
         </div>
 
-        <!-- Example Project Card 2 -->
         <div class="project-card">
           <div class="project-image">
-            <img src="./assets/saccostream-screenshot2.png" alt="SaccoStream Project" />
+            <img src="./assets/PM1.png" alt="Peer-Mentorship-3D-site" />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Peer-Mentorship-3D-site</h2>
+            <p class="project-description">
+              An immersive 3D website showcasing peer mentorship programs with
+              interactive elements and dynamic visual content powered by
+              Three.js.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Three JS</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/Anyona-00/Peer-Mentorship-3D-site"
+                class="project-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://peer-mentorship-3-d-site.vercel.app/"
+                class="project-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="PM3D">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/PK1.png" alt="Pokemon Search app" />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Pokédex</h2>
+            <p class="project-description">
+              A comprehensive Pokémon encyclopedia that allows users to search,
+              filter, and explore detailed information about Pokémon characters
+              using the Pokémon API.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Pokemon API</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/Anyona-00/Pokemon-Search-App"
+                class="project-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://pokemon-search-app-t2j4.vercel.app/"
+                class="project-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="Pokédex">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/RPG1.png" alt="RPG-Dragon Fight" />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">RPG Dragon Fight</h2>
+            <p class="project-description">
+              An engaging browser-based RPG game where players battle dragons
+              using different weapons and spells while managing their inventory
+              and health.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/Anyona-00/RPG-Dragon-reppeler"
+                class="project-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://rpg-dragon-reppeler.vercel.app/"
+                class="project-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="RPG">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./assets/PA1.png" alt="Pixel Adventure" />
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Pixel Adventure</h2>
+            <p class="project-description">
+              A nostalgic pixel-art platformer game featuring challenging
+              levels, collectable items, and enemy encounters with
+              retro-inspired graphics and controls.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a
+                href="https://github.com/Anyona-00/Platformer-Game"
+                class="project-btn"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://platformer-game-sandy.vercel.app/"
+                class="project-btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <button class="screenshots-btn" data-project="pixeladventure">
+                Screenshots
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="./assets/saccostream-screenshot2.png"
+              alt="SaccoStream Project"
+            />
           </div>
           <div class="project-content">
             <h2 class="project-title">SaccoStream – Smart Payment</h2>
             <p class="project-description">
-              A modern payment solution designed for Saccos to streamline their
-              financial operations.
+              A secure financial management system for Savings and Credit
+              Cooperatives (SACCOs) with features for transaction processing,
+              member management, and financial reporting.
             </p>
             <div class="project-tech">
               <span class="tech-tag">React</span>
@@ -301,14 +481,14 @@
             </div>
             <div class="project-buttons">
               <a
-                href="https://github.com/Adamur-Tribe/SaccoStream"
-                class="project-btn github-btn"
+                href="https://github.com/Anyona-00/SaccoStream-Front-end"
+                class="project-btn"
                 target="_blank"
                 >GitHub</a
               >
               <a
-                href="https://rococo-tartufo-70bb1e.netlify.app/"
-                class="project-btn demo-btn"
+                href="https://sacco-stream.vercel.app/"
+                class="project-btn"
                 target="_blank"
                 >Live Demo</a
               >
@@ -353,6 +533,25 @@
           "./assets/saccostream-screenshot2.png",
           "./assets/saccostream-screenshot3.png",
         ],
+        pixeladventure: [
+          "./assets/PA1.png",
+          "./assets/PA2.png",
+          "./assets/PA3.png",
+          "./assets/PA4.png",
+        ],
+        Pokédex: ["./assets/PK1.png", "./assets/PK2.png"],
+        RPG: [
+          "./assets/RPG1.png",
+          "./assets/RPG2.png",
+          "./assets/RPG3.png",
+          "./assets/RPG4.png",
+          "./assets/RPG5.png",
+          "./assets/RPG6.png",
+          "./assets/RPG7.png",
+          "./assets/RPG8.png",
+        ],
+        PM3D: ["./assets/PM1.png", "./assets/PM2.png", "./assets/PM3.png"],
+
         // Add more projects' screenshots here
       };
 
@@ -360,6 +559,10 @@
         btn.addEventListener("click", () => {
           const project = btn.dataset.project;
           const screenshots = projectScreenshots[project];
+          const modalTitle = document.querySelector(".modal-title");
+
+          // Update modal title to include project name
+          modalTitle.textContent = `${project} Screenshots`;
 
           screenshotGrid.innerHTML = "";
 
